@@ -8,10 +8,10 @@ function playRound (playerSelection, computerSelection) {
             return "You lose! Paper beats Rock!";
         }
         else if (computerSelection === "scissors") {
-            return "You win! Rock beats scissors!";
+            return "You win! Rock beats Scissors!";
         }
         else if (computerSelection === "rock") {
-            return "It's a Tie! You both chose rock!";
+            return "It's a Tie! You both chose Rock!";
         }
         else {
             return "There's been an error.  Try again.";
@@ -22,14 +22,30 @@ function playRound (playerSelection, computerSelection) {
             return "You win! Paper beats Rock!";
         }
         else if (computerSelection === "scissors") {
-            return "You lose! Scissors beats paper!";
+            return "You lose! Scissors beats Paper!";
         }
         else if (computerSelection === "paper") {
-            return "It's a Tie! You both chose paper!";
+            return "It's a Tie! You both chose Paper!";
         }
         else {
             return "There's been an error.  Try again.";
         }
     }
-    
+    else if (playerSelection === "scissors") {
+        if (computerSelection === "rock") {
+            return "You lose! Rock beats Scissors!";
+        }
+        else if (computerSelection === "paper") {
+            return "You win! Scissors beats Paper!";
+        }
+        else if (computerSelection === "scissors") {
+            return "It's a Tie! You both chose Scissors!";
+        }
+        else {
+            return "There's been an error.  Try again.";
+        }
+    }
+    else {
+        return "There's been an error.  Please choose either rock, paper, or scissors."
+    }
 }
